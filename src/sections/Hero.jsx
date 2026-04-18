@@ -2,7 +2,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 import useMousePosition from "../hooks/useMousePosition";
 import useSmoothCursor from "../hooks/useSmoothCursor";
-import CursorGlow from "../components/effects/CursorGlow";
+import CursorGlow from "../components/effects/cursorGlow";
 
 export default function Hero() {
   const ref = useRef();
