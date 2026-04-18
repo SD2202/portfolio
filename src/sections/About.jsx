@@ -5,11 +5,12 @@ export default function About() {
   const imageRef = useRef();
 
   return (
-    <section className="text-white py-20 px-6">
+    <section className="text-white py-10 md:py-16 px-4 md:px-6">
 
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      {/* 🔹 Top Section */}
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center">
 
-        {/* 🖼️ Profile with Cursor Glow */}
+        {/* 🖼️ Profile */}
         <div
           ref={imageRef}
           className="relative flex justify-center group"
@@ -17,38 +18,38 @@ export default function About() {
           <img
             src={profile}
             alt="profile"
-            className="w-[280px] h-[280px] object-cover rounded-2xl border border-gray-800 transition duration-300 group-hover:scale-105"
+            className="w-[200px] md:w-[280px] h-[200px] md:h-[280px] object-cover rounded-2xl border border-gray-800 transition duration-300 group-hover:scale-105"
           />
 
-          {/* Glow on hover */}
-          <div className="absolute w-[300px] h-[300px] bg-purple-500/20 blur-3xl opacity-0 group-hover:opacity-100 transition" />
+          {/* Glow */}
+          <div className="absolute w-[220px] md:w-[300px] h-[220px] md:h-[300px] bg-purple-500/20 blur-3xl opacity-0 group-hover:opacity-100 transition" />
         </div>
 
         {/* 🧠 Content */}
-        <div>
+        <div className="text-center md:text-left">
 
-          <h2 className="text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6">
             About Me
           </h2>
 
-          <p className="text-gray-400 leading-relaxed">
+          <p className="text-gray-400 text-sm md:text-base leading-relaxed">
             I’m a Computer Science Engineering student focused on building
             scalable web applications and data-driven systems. I enjoy
             blending clean UI with efficient backend logic.
           </p>
 
-          <p className="text-gray-400 leading-relaxed mt-4">
+          <p className="text-gray-400 text-sm md:text-base leading-relaxed mt-3 md:mt-4">
             My work spans full-stack development, analytics dashboards,
             and AI-driven workflows. I aim to build solutions that are both
             functional and visually refined.
           </p>
 
-          {/* 🔥 Currently Working On */}
-          <div className="mt-6 p-4 border border-gray-800 rounded-xl bg-white/5">
-            <h3 className="text-sm text-gray-300 mb-2">
+          {/* 🔥 Current Work */}
+          <div className="mt-5 md:mt-6 p-4 border border-gray-800 rounded-xl bg-white/5">
+            <h3 className="text-xs md:text-sm text-gray-300 mb-2">
               Currently Working On
             </h3>
-            <p className="text-sm text-gray-400">
+            <p className="text-xs md:text-sm text-gray-400">
               Building scalable full-stack applications, improving UI/UX
               interactions, and exploring AI-powered analytics systems.
             </p>
@@ -57,14 +58,14 @@ export default function About() {
         </div>
       </div>
 
-      {/* 📊 Skills Section */}
-      <div className="max-w-6xl mx-auto mt-20">
+      {/* 📊 Skills */}
+      <div className="max-w-6xl mx-auto mt-12 md:mt-20">
 
-        <h3 className="text-2xl font-semibold mb-10 text-center">
+        <h3 className="text-xl md:text-2xl font-semibold mb-8 md:mb-10 text-center">
           Skills
         </h3>
 
-        <div className="space-y-6">
+        <div className="space-y-5 md:space-y-6">
 
           {[
             { name: "Programming Languages", level: 85 },
@@ -78,13 +79,11 @@ export default function About() {
 
             <div key={i} className="group">
 
-              {/* Skill Name */}
-              <div className="flex justify-between mb-1 text-sm">
+              <div className="flex justify-between mb-1 text-xs md:text-sm">
                 <span>{skill.name}</span>
                 <span className="text-gray-400">{skill.level}%</span>
               </div>
 
-              {/* Progress Bar */}
               <div className="w-full h-2 bg-gray-800 rounded-full overflow-hidden">
 
                 <div
@@ -100,21 +99,21 @@ export default function About() {
 
         </div>
 
-        {/* 🎯 Skill Tags (with hover glow) */}
-        <div className="flex flex-wrap justify-center gap-3 mt-12">
+        {/* 🎯 Skill Tags */}
+        <div className="flex flex-wrap justify-center gap-2 md:gap-3 mt-10 md:mt-12 px-2">
 
           {[
-            "Programming Languages: Python, JavaScript,Java",
-            " Web & Backend Development: FastAPI, REST API Development, HTML, Tailwind CSS, MERN Stack",
-            "Databases: MySQL, MongoDB (NoSQL Databases)",
-            "Cloud & Deployment: Render, netlify, vercel, AWS",
-            "Data Analytics & Visualization: Pandas, NumPy, PowerBI, Tableau",
-            "Software Development Practices: SoftwareEngineering, SDLC, Agile Methodologies",
-            "AI and Automation: Prompt Engineering & Conversational Workflow Design",
+            "Python, JavaScript, Java",
+            "FastAPI, REST APIs, MERN Stack",
+            "MySQL, MongoDB",
+            "AWS, Vercel, Netlify, Render",
+            "Pandas, NumPy, PowerBI, Tableau",
+            "SDLC, Agile",
+            "AI Automation & Prompt Engineering",
           ].map((skill, i) => (
             <span
               key={i}
-              className="px-4 py-2 text-sm border border-gray-700 rounded-full transition 
+              className="px-3 md:px-4 py-1.5 md:py-2 text-xs md:text-sm border border-gray-700 rounded-full transition 
               hover:border-purple-400 hover:shadow-[0_0_15px_rgba(168,85,247,0.5)] 
               hover:scale-105"
             >
