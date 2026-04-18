@@ -1,11 +1,20 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import useMousePosition from "../hooks/useMousePosition";
 import useSmoothCursor from "../hooks/useSmoothCursor";
-import CursorGlow from "../components/effects/cursorGlow";
+import CursorGlow from "../components/effects/CursorGlow";
 
 export default function Hero() {
   const ref = useRef();
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
 
   const mouse = useMousePosition();
   const smooth = useSmoothCursor(mouse);
@@ -21,42 +30,64 @@ export default function Hero() {
   const opacity = useTransform(scrollYProgress, [0.4, 0.7], [1, 0]);
 
   return (
-    <section ref={ref} className="h-[130vh] relative">
+    <section ref={ref} className="h-[120vh] md:h-[130vh] relative">
 
-      {/* Cursor Glow */}
-      <CursorGlow x={smooth.x} y={smooth.y} />
+      {/* Cursor Glow (disabled on mobile) */}
+      {!isMobile && <CursorGlow x={smooth.x} y={smooth.y} />}
 
-      {/* Hero Content */}
-      <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
+      <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden px-4">
 
-        {/* LEFT */}
-        <motion.div
-          style={{ x: leftX, scale, opacity }}
-          className="absolute left-0 w-1/2 h-full flex items-center justify-end pr-2 z-20"
-        >
-          <h1 className="name-font text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-wide bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-            SPARSH
-          </h1>
-        </motion.div>
+        {/* 🔥 MOBILE VERSION */}
+        {isMobile ? (
+          <motion.div
+            style={{ scale, opacity }}
+            className="flex flex-col items-center text-center"
+          >
+            <h1 className="name-font text-4xl sm:text-5xl font-bold tracking-tight bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+              SPARSH
+            </h1>
 
-        {/* RIGHT */}
-        <motion.div
-          style={{ x: rightX, scale, opacity }}
-          className="absolute right-0 w-1/2 h-full flex items-center justify-start pl-2 z-20"
-        >
-          <h1 className="name-font text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-wide bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-            DWIVEDI
-          </h1>
-        </motion.div>
-        <motion.p
-            style={{ opacity }}
-                className="absolute bottom-32 text-gray-400 text-sm md:text-base tracking-wide text-center z-20"
-                  >
-                    Software Developer • Data Analyst • AI Automation
-                    </motion.p>
-                    </div>
-                    </section>
-                    
+            <h1 className="name-font text-4xl sm:text-5xl font-bold tracking-tight bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+              DWIVEDI
+            </h1>
+
+            <p className="mt-3 text-gray-400 text-xs sm:text-sm tracking-wide text-center px-2">
+              Software Developer • Data Analyst • AI Automation
+            </p>
+          </motion.div>
+        ) : (
+          <>
+            {/* 🔥 DESKTOP LEFT */}
+            <motion.div
+              style={{ x: leftX, scale, opacity }}
+              className="absolute left-0 w-1/2 h-full flex items-center justify-end pr-4 z-20"
+            >
+              <h1 className="name-font text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tight bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                SPARSH
+              </h1>
+            </motion.div>
+
+            {/* 🔥 DESKTOP RIGHT */}
+            <motion.div
+              style={{ x: rightX, scale, opacity }}
+              className="absolute right-0 w-1/2 h-full flex items-center justify-start pl-4 z-20"
+            >
+              <h1 className="name-font text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tight bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                DWIVEDI
+              </h1>
+            </motion.div>
+
+            {/* Subtitle */}
+            <motion.p
+              style={{ opacity }}
+              className="absolute bottom-32 text-gray-400 text-sm md:text-base tracking-wide text-center z-20"
+            >
+              Software Developer • Data Analyst • AI Automation
+            </motion.p>
+          </>
+        )}
+
+      </div>
+    </section>
   );
 }
-    
