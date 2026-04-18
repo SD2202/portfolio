@@ -75,17 +75,6 @@ export default function Hero() {
           >
             Software Developer • Data Analyst • AI Automation
           </motion.p>
-          <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden px-4">
-            <a
-  href="/assets/resume.pdf"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="absolute top-6 right-6 z-30 px-4 py-2 text-xs md:text-sm border border-gray-700 rounded-full text-white hover:border-purple-400 hover:text-purple-400 transition backdrop-blur-md bg-white/5"
->
-  View Resume
-</a>
-
-        </div>
 
       </div>
     </section>
