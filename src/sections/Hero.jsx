@@ -52,39 +52,38 @@ export default function Hero() {
         </p>
       </div>
 
-      {/* 🔥 DESKTOP */}
-      <div className="hidden md:flex items-center justify-center w-full h-full relative">
+     {/* 🔥 DESKTOP */}
+<div className="hidden md:flex items-center justify-center w-full h-full relative">
 
-        {/* LEFT */}
-        <motion.div
-          style={{ x: leftX, scale, opacity }}
-          className="absolute left-1/2 -translate-x-full flex items-center"
-        >
-          <h1 className="name-font text-6xl md:text-8xl lg:text-9xl font-bold bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-            SPARSH
-          </h1>
-        </motion.div>
+  {/* LEFT */}
+  <motion.div
+    style={{ x: leftX, scale, opacity }}
+    className="absolute left-0 w-1/2 flex justify-end pr-2"
+  >
+    <h1 className="name-font text-6xl md:text-8xl lg:text-9xl font-bold bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+      SPARSH
+    </h1>
+  </motion.div>
 
-        {/* RIGHT */}
-        <motion.div
-          style={{ x: rightX, scale, opacity }}
-          className="absolute left-1/2 flex items-center"
-        >
-          <h1 className="name-font text-6xl md:text-8xl lg:text-9xl font-bold bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-            DWIVEDI
-          </h1>
-        </motion.div>
+  {/* RIGHT */}
+  <motion.div
+    style={{ x: rightX, scale, opacity }}
+    className="absolute right-0 w-1/2 flex justify-start pl-2"
+  >
+    <h1 className="name-font text-6xl md:text-8xl lg:text-9xl font-bold bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+      DWIVEDI
+    </h1>
+  </motion.div>
 
-        {/* Subtitle */}
-        <motion.p
-          style={{ opacity }}
-          className="absolute bottom-20 text-gray-400 text-sm md:text-base text-center"
-        >
-          Software Developer • Data Analyst • AI Automation
-        </motion.p>
+  {/* Subtitle */}
+  <motion.p
+    style={{ opacity }}
+    className="absolute bottom-20 text-gray-400 text-sm md:text-base text-center w-full"
+  >
+    Software Developer • Data Analyst • AI Automation
+  </motion.p>
 
-      </div>
-
+</div>
     </section>
   );
 }
