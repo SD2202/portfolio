@@ -20,8 +20,8 @@ export const projects = [
   image: scout1,
   gallery: [scout1, scout2, scout3,scout4,scout5,scout6],
   tech: ["React", "FastAPI", "AI", "NVIDIA NIM", "MongoDB"],
-  live: "https://your-live-link.com",
-  github: "https://github.com/SD2202/scoutflow-ai",
+  live: "https://scout-flow-frontend.vercel.app/",
+  github: "https://github.com/SD2202/Deccan_AI_Hackathon",
 },
   {
     title: "CareStep",
