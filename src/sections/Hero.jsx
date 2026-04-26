@@ -21,7 +21,7 @@ export default function Hero() {
   const opacity = useTransform(scrollYProgress, [0.4, 0.7], [1, 0]);
 
   return (
-    <section ref={ref} className="h-[120vh] md:h-[130vh] relative">
+    <section ref={ref} className="h-screen relative">
 
       {/* Cursor Glow (only visible on desktop) */}
       <div className="hidden md:block">
@@ -81,7 +81,7 @@ export default function Hero() {
           {/* Subtitle */}
           <motion.p
             style={{ opacity }}
-            className="absolute bottom-32 text-gray-400 text-sm md:text-base tracking-wide text-center z-20 w-full"
+            className="absolute bottom-16 md:bottom-24 text-gray-400 text-sm md:text-base tracking-wide text-center z-20 w-full"
           >
             Software Developer • Data Analyst • AI Automation
           </motion.p>
