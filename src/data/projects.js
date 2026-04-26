@@ -6,12 +6,12 @@ import insight1 from "../assets/images/projects/InsightForge1.png";
 import insight2 from "../assets/images/projects/InsightForge2.png";
 import insight3 from "../assets/images/projects/InsightForge3.png";
 import insight4 from "../assets/images/projects/InsightForge4.png";
-import scout1 from "../assets/images/projects/ScoutFlow1.jpg";
-import scout2 from "../assets/images/projects/ScoutFlow2.jpg";
-import scout3 from "../assets/images/projects/ScoutFlow3.jpg";
-import scout4 from "../assets/images/projects/ScoutFlow4.jpg";
-import scout5 from "../assets/images/projects/ScoutFlow5.jpg";
-import scout6 from "../assets/images/projects/ScoutFlow6.jpg";
+import scout1 from "../assets/images/projects/ScoutFlow1.png";
+import scout2 from "../assets/images/projects/ScoutFlow2.png";
+import scout3 from "../assets/images/projects/ScoutFlow3.png";
+import scout4 from "../assets/images/projects/ScoutFlow4.png";
+import scout5 from "../assets/images/projects/ScoutFlow5.png";
+import scout6 from "../assets/images/projects/ScoutFlow6.png";
 export const projects = [
   {
   title: "ScoutFlow AI",
