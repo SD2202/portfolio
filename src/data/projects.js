@@ -6,7 +6,23 @@ import insight1 from "../assets/images/projects/InsightForge1.png";
 import insight2 from "../assets/images/projects/InsightForge2.png";
 import insight3 from "../assets/images/projects/InsightForge3.png";
 import insight4 from "../assets/images/projects/InsightForge4.png";
+import scout1 from "../assets/images/projects/scoutflow1.jpg";
+import scout2 from "../assets/images/projects/scoutflow2.jpg";
+import scout3 from "../assets/images/projects/scoutflow3.jpg";
+import scout4 from "../assets/images/projects/scoutflow4.jpg";
+import scout5 from "../assets/images/projects/scoutflow5.jpg";
+import scout6 from "../assets/images/projects/scoutflow6.jpg";
 export const projects = [
+  {
+  title: "ScoutFlow AI",
+  description:
+    "AI-powered recruitment platform that parses job descriptions and matches candidates using intelligent automation workflows.",
+  image: scout1,
+  gallery: [scout1, scout2, scout3,scout4,scout5,scout6],
+  tech: ["React", "FastAPI", "AI", "NVIDIA NIM", "MongoDB"],
+  live: "https://your-live-link.com",
+  github: "https://github.com/SD2202/scoutflow-ai",
+},
   {
     title: "CareStep",
     description: "Healthcare platform for booking medical services with role-based dashboards.",
