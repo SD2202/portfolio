@@ -22,16 +22,7 @@ export const projects = [
   tech: ["React", "FastAPI", "AI", "NVIDIA NIM", "MongoDB"],
   live: "https://scout-flow-frontend.vercel.app/",
   github: "https://github.com/SD2202/Deccan_AI_Hackathon",
-},
-  {
-    title: "CareStep",
-    description: "Healthcare platform for booking medical services with role-based dashboards.",
-    image: carestep,
-    gallery: [carestep],
-    tech: ["HTML", "JS", "Tailwind", "Python", "MySQL"],
-    live: "https://carestep-healthcare.netlify.app/",
-    github: "https://github.com/SD2202/Carestep",
-  },
+},\
   {
     title: "Expense Tracker",
     description: "MERN-based financial tracker with analytics and dashboards.",
@@ -40,6 +31,15 @@ export const projects = [
     tech: ["MERN", "JWT", "Chart.js"],
     live: "https://expensetracker221.netlify.app/",
     github: "https://github.com/SD2202",
+  },
+  {
+    title: "CareStep",
+    description: "Healthcare platform for booking medical services with role-based dashboards.",
+    image: carestep,
+    gallery: [carestep],
+    tech: ["HTML", "JS", "Tailwind", "Python", "MySQL"],
+    live: "https://carestep-healthcare.netlify.app/",
+    github: "https://github.com/SD2202/Carestep",
   },
   {
     title: "InsightForge",
