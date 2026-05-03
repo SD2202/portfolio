@@ -22,7 +22,7 @@ export const projects = [
   tech: ["React", "FastAPI", "AI", "NVIDIA NIM", "MongoDB"],
   live: "https://scout-flow-frontend.vercel.app/",
   github: "https://github.com/SD2202/Deccan_AI_Hackathon",
-},\
+},
   {
     title: "Expense Tracker",
     description: "MERN-based financial tracker with analytics and dashboards.",
