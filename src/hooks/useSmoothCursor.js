@@ -8,8 +8,8 @@ export default function useSmoothCursor(target) {
 
     const update = () => {
       setSmooth((prev) => ({
-        x: prev.x + (target.x - prev.x) * 0.08,
-        y: prev.y + (target.y - prev.y) * 0.08,
+        x: prev.x + (target.x - prev.x) * 0.2,
+        y: prev.y + (target.y - prev.y) * 0.2,
       }));
 
       frame = requestAnimationFrame(update);
